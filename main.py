@@ -19,7 +19,7 @@ templates = Jinja2Templates(directory="templates")
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 # Global variables to fill at launch
-PRESENTATION_TEAMS = dict()
+PRESENTATION_TEAMS = list()
 BASE_URL = 'https://itcdland.csumb.edu/scdcapstone/'
 
 @app.on_event("startup")
@@ -31,6 +31,7 @@ async def startup_event():
 # Index entrypoint for website.
 @app.get("/", status_code=200)
 async def index(request: Request):
+    pprint.pprint(PRESENTATION_TEAMS[0])
     return templates.TemplateResponse("index.html", {"request": request})
 
 # Health check for SSL terminating proxy
@@ -67,30 +68,29 @@ async def fetch_home_page():
         image = info.find('img')['src']
         team_name = info.find('strong').text
 
-        PRESENTATION_TEAMS[key] = {
+        PRESENTATION_TEAMS.append({
             'id': str(key).split('=')[-1],
             'image': image,
             'team': {
                 'name': team_name
             }
-        }
+        })
 
 async def get_team_info():
-    for key in PRESENTATION_TEAMS:
-        website = requests.get(BASE_URL + key, verify=False).text
+    for i, team in enumerate(PRESENTATION_TEAMS):
+        website = requests.get(BASE_URL + 'project1.php?project_id=' + team['id'], verify=False).text
         html = bs(website, 'html.parser')
 
         description = html.find('div', {'class': 'col-md-8'}).text.split('Presentation Room:')[-1].strip()
-        PRESENTATION_TEAMS[key]['team']['description'] = description
+        team['team']['description'] = description
 
         students = html.find_all('span', {'class': 'students'})
-        PRESENTATION_TEAMS[key]['team']['members'] = list()
+        team['team']['members'] = list()
 
         for student in students:
-            parse_student_info(key, student)
+            parse_student_info(i, student)
 
-
-def parse_student_info(key, student):
+def parse_student_info(index, student):
     """
     @param key
         - The key to index for the PRESENTATION_TEAMS
@@ -106,14 +106,16 @@ def parse_student_info(key, student):
     major = student.find('i').text
     email = parse_student_email(student.text)
     resume, github, linkedin = get_resume_linkedin_github(student.find_all('a'))
-    PRESENTATION_TEAMS[key]['team']['members'].append({
+    PRESENTATION_TEAMS[index]['team']['members'].append({
         'name': name,
         'image': image,
         'major': major,
         'email': email,
-        'resume': resume,
-        'github': github,
-        'linkedin': linkedin,
+        'links': [
+            ('Resume', resume),
+            ('GitHub', github),
+            ('LinkedIn', linkedin)
+        ],
     })
 
 

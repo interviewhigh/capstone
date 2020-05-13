@@ -1,8 +1,8 @@
 $(document).ready(() => {
     $(".credits").on('click', () => {
         Swal.fire({
-            title: "Built in a night",
-            text: "Brought to you by the Interview High Team"
+            title: "Built In A Night",
+            text: "Built and hosted for you by the Interview High team"
         })
     })
 })

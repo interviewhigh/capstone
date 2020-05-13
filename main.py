@@ -7,6 +7,8 @@ from fastapi import FastAPI, Request
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 import aiohttp
+import requests
+from bs4 import BeautifulSoup as bs
 
 # Initialize application
 app = FastAPI()
@@ -15,9 +17,14 @@ templates = Jinja2Templates(directory="templates")
 # Mount static directory as the root
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
+# Global variables to fill at launch
+PRESENTATION_TEAMS = dict()
+BASE_URL = 'https://itcdland.csumb.edu/scdcapstone/'
+
 @app.on_event("startup")
 async def startup_event():
-    
+    await fetch_home_page()    
+    await get_team_info()
     return
 
 # Index entrypoint for website.
@@ -40,3 +47,34 @@ async def project(request: Request, project_id: str = None):
 @app.get("/.*")
 async def err_render(request: Request):
     return templates.TemplateResponse("404.html", {"request": request})
+
+async def fetch_home_page():
+    website = requests.get(BASE_URL + "index1.php", verify=False).text
+    html = bs(website, 'html.parser')
+    spans = html.find_all('span', {'class': 'capstonesPhp'})
+    for span in spans:
+        info = span.find('a')
+        key = info['href']
+        image = info.find('img')['src']
+        team_name = info.find('strong').text
+
+        PRESENTATION_TEAMS[key] = {
+            'id': str(key).split('=')[-1],
+            'image': image,
+            'team': {
+                'name': team_name
+            }
+        }
+
+async def get_team_info():
+    for key in PRESENTATION_TEAMS:
+        website = requests.get(BASE_URL + key, verify=False).text
+        html = bs(website, 'html.parser')
+
+        students = html.find_all('span', {'class': 'students'})
+        PRESENTATION_TEAMS[key]['team']['members'] = list()
+        for student in students:
+            info  = student.find('span', {'class': 'capstonestudentinfo'})
+            name = student.find('strong').text
+            image = info.find('img')['src']
+            major = student.find('i').text

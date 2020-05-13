@@ -1,5 +1,6 @@
 {% extends "base.html" %} {% block content %}
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #2f496e; color: white;">
+    <span class="navbar-brand" style="color: white;">Class of Spring 2020</span>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -28,10 +29,11 @@
         <div class="row">
             {% for p in projects %}
             <div class="col m-5">
-                <div class="card w-100 h-100 shadow">
-                    <img class="card-img-top center" src="{{p['image']}}" alt="Team Image" style="width: 150px;">
+                <div class="card w-100 h-100 shadow testimonial-card">
+                    <img class="card-img-top center pt-5" src="{{p['image']}}" alt="Team Image" style="width: 150px;">
                     <div class="card-body">
                         <h4 class="card-title center"><a>{{ p['team']['name'] }}</a></h4>
+                        <hr style="width: 50%;">
                         <a href="/project/{{p['id']}}" class="btn btn-primary learn-more-btn">Learn More</a>
                     </div>
                 </div>

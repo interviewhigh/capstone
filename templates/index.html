@@ -27,12 +27,12 @@
     <div class="container">
         <div class="row">
         {% for p in projects %}
-        <div class="col">
-            <div class="card m-5">
-                <img class="card-img-top" src="{{p['image']}}" alt="Team Image" style="width: 150px;">
+        <div class="col m-5">
+            <div class="card w-100 h-100 shadow">
+                <img class="card-img-top center" src="{{p['image']}}" alt="Team Image" style="width: 150px;">
                 <div class="card-body">
-                    <h4 class="card-title"><a>{{ p['team']['name'] }}</a></h4>
-                    <a href="/project/{{p['id']}}" class="btn btn-primary">Learn More</a>
+                    <h4 class="card-title center"><a>{{ p['team']['name'] }}</a></h4>
+                    <a href="/project/{{p['id']}}" class="btn btn-primary learn-more-btn">Learn More</a>
                 </div>
             </div>
         </div>

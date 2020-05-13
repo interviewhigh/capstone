@@ -35,3 +35,7 @@ footer {
 .card-text {
     max-width: 750px;
 }
+
+.learn-more-btn {
+    bottom: 0;
+}

@@ -9,6 +9,7 @@ from fastapi.templating import Jinja2Templates
 import aiohttp
 import requests
 from bs4 import BeautifulSoup as bs
+import pprint
 
 # Initialize application
 app = FastAPI()
@@ -79,10 +80,68 @@ async def get_team_info():
         website = requests.get(BASE_URL + key, verify=False).text
         html = bs(website, 'html.parser')
 
+        description = html.find('div', {'class': 'col-md-8'}).text.split('Presentation Room:')[-1].strip()
+        PRESENTATION_TEAMS[key]['team']['description'] = description
+
         students = html.find_all('span', {'class': 'students'})
         PRESENTATION_TEAMS[key]['team']['members'] = list()
+
         for student in students:
-            info  = student.find('span', {'class': 'capstonestudentinfo'})
-            name = student.find('strong').text
-            image = info.find('img')['src']
-            major = student.find('i').text
+            parse_student_info(key, student)
+
+
+def parse_student_info(key, student):
+    """
+    @param key
+        - The key to index for the PRESENTATION_TEAMS
+    @param student
+        - The student span html
+    
+    It parses the student information and adds it to the PRESENTATION_TEAMS
+    based on the key(their team) based in
+    """
+    info  = student.find('span', {'class': 'capstonestudentinfo'})
+    name = student.find('strong').text
+    image = info.find('img')['src']
+    major = student.find('i').text
+    email = parse_student_email(student.text)
+    resume, github, linkedin = get_resume_linkedin_github(student.find_all('a'))
+    PRESENTATION_TEAMS[key]['team']['members'].append({
+        'name': name,
+        'image': image,
+        'major': major,
+        'email': email,
+        'resume': resume,
+        'github': github,
+        'linkedin': linkedin,
+    })
+
+
+def parse_student_email(text):
+    """
+    @param text
+        - raw text in the html
+    @return 
+        - Users email
+    """
+    return [entry for entry in text.split(' ') if '@' in entry][0].split('CS')[-1]
+
+
+def get_resume_linkedin_github(tags):
+    """
+    @param tags
+        - All the a tags of the span
+    @returns
+        - The resume, linkedin and github profile link of the student
+    """
+    resume = ''
+    linkedin = ''
+    github = ''
+    for tag in tags:
+        if 'Resume' in tag.text:
+            resume = tag['href']
+        elif 'LinkedIn' in tag.text:
+            linkedin = tag['href']
+        elif 'GitHub' in tag.text:
+            github = tag['href']
+    return resume, github, linkedin

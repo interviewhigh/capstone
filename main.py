@@ -17,6 +17,8 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 
 @app.on_event("startup")
 async def startup_event():
+    
+    return
 
 # Index entrypoint for website.
 @app.get("/", status_code=200)

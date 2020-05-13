@@ -32,7 +32,11 @@ async def startup_event():
 # Index entrypoint for website.
 @app.get("/", status_code=200)
 async def index(request: Request):
-    return templates.TemplateResponse("index.html", {"request": request, "projects": PRESENTATION_TEAMS})
+    return templates.TemplateResponse("index.html", {
+        "request": request, 
+        "projects": PRESENTATION_TEAMS,
+        "page": "home"
+    })
 
 # Health check for SSL terminating proxy
 @app.get("/health", status_code=200)
@@ -48,15 +52,24 @@ async def project(request: Request, project_id: str = None):
 
 @app.get("/about", status_code=200)
 async def about(request: Request):
-    return templates.TemplateResponse("about.html", {"request": request})
+    return templates.TemplateResponse("about.html", {
+        "request": request,
+        "page": "about"
+    })
 
 @app.get("/presentations", status_code=200)
 async def presentations(request: Request):
-    return templates.TemplateResponse("presentations.html", {"request": request})
+    return templates.TemplateResponse("presentations.html", {
+        "request": request,
+        "page": "presentations"
+    })
 
 @app.get("/contact", status_code=200)
 async def contact(request: Request):
-    return templates.TemplateResponse("contact.html", {"request": request})
+    return templates.TemplateResponse("contact.html", {
+        "request": request,
+        "page": "contactb"
+    })
 
 # 404 error handling
 @app.get("/.*", status_code=404)

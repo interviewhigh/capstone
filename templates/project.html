@@ -1,26 +1,4 @@
 {% extends "base.html" %} {% block content %}
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2f496e; color: white;">
-    <span class="navbar-brand" style="color: white;">Class of Spring 2020</span>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="/">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/about">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/presentations">Presentations</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/contact">Contact</a>
-            </li>
-        </ul>
-    </div>
-</nav>
 <div class="jumbotron text-center">
     <h1>School of Computing and Design Online Capstone Festival</h1>
 </div>
@@ -41,10 +19,17 @@
             </div>
         </div>
     </div>
-    <div class="row">
-        {% for member in team['team']['members'] %}
-            {% include 'three_row_card.html' %}
-        {% endfor %}
-    </div>
+        <div class="row">
+            {% for member in team['team']['members'] %}
+            {% if team['team']['members']|length % 3 == 0 %}
+                {% include 'three_row_card.html' %}
+            {% elif team['team']['members']|length % 2 == 0 %}
+                {% include 'two_row_card.html' %}
+            {% else %}
+                <!-- Any other combos use the column layout -->
+                {% include 'three_row_card.html' %}
+            {% endif %}
+            {% endfor %}
+        </div>
 </div>
 {% endblock %}

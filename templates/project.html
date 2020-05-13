@@ -35,9 +35,8 @@
                     </a>
                 </div>
                 <div class="card-body card-body-cascade text-center">
-                    <h4 class="card-title center"><strong>{{ team['team']['name'] }}</strong></h4>
-                    <hr style="width: 50%;" />
-                    <p class="center card-text"> {{ team['team']['description'] }} </p>
+                    <h4 class="text-center font-weight-bold">{{ team['team']['name'] }}</h4>
+                    <p class="center text-muted"> {{ team['team']['description'] }} </p>
                 </div>
             </div>
         </div>
@@ -50,24 +49,19 @@
                 <div class="avatar mx-auto white">
                     <img src="{{ member['image'] }}" class="shadow-sm rounded-circle mt-n5" style="width: 200px; height: 200px;" alt="{{ member['name'] }}">
                 </div>
-                <div class="card-body center">
-                    <h4 class="card-title center"> {{ member['name'] }} </h4>
-                    <hr>
-                    <a href="{{ member['email'] }}" target="_blank" class="px-2 fa-lg li-ic"><i class="fas fa-at"></i></a> {% for link in member['links'] %} {% if link[0] == 'LinkedIn' %}
-                    <a href="{{link[1]}}" target="_blank" class="px-2 fa-lg li-ic"><i class="fab fa-linkedin-in"></i></a> {% endif %} {% if link[0] == 'GitHub' %}
-                    <a href="{{link[1]}}" target="_blank" class="px-2 fa-lg li-ic"><i class="fab fa-github"></i></a> {% endif %} {% if link[0] == 'Resume' %}
-                    <a href="{{link[1]}}" target="_blank" class="px-2 fa-lg li-ic"><i class="far fa-file-alt"></i> Resume</a> {% endif %} {% endfor %}
+                <div class="card-body">
+                    <h4 class="text-center"> {{ member['name'] }} </h4>
+                    <hr class="w-100">
+                    <div class="text-center">
+                        <a href="{{ member['email'] }}" target="_blank" class="px-2 fa-lg li-ic"><i class="fas fa-at"></i></a> {% for link in member['links'] %} {% if link[0] == 'LinkedIn' %}
+                        <a href="{{link[1]}}" target="_blank" class="px-2 fa-lg li-ic"><i class="fab fa-linkedin-in"></i></a> {% endif %} {% if link[0] == 'GitHub' %}
+                        <a href="{{link[1]}}" target="_blank" class="px-2 fa-lg li-ic"><i class="fab fa-github"></i></a> {% endif %} {% if link[0] == 'Resume' %}
+                        <a href="{{link[1]}}" target="_blank" class="px-2 fa-lg li-ic"><i class="far fa-file-alt"></i> Resume</a> {% endif %} {% endfor %}
+                    </div>
                 </div>
             </div>
         </div>
         {% endfor %}
-    </div>
-</div>
-<div class="row">
-    <div>
-        <div class="container mt-5  animated slideInUp">
-            
-        </div>
     </div>
 </div>
 {% endblock %}

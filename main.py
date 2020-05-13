@@ -31,8 +31,7 @@ async def startup_event():
 # Index entrypoint for website.
 @app.get("/", status_code=200)
 async def index(request: Request):
-    pprint.pprint(PRESENTATION_TEAMS[0])
-    return templates.TemplateResponse("index.html", {"request": request})
+    return templates.TemplateResponse("index.html", {"request": request, "projects": PRESENTATION_TEAMS})
 
 # Health check for SSL terminating proxy
 @app.get("/health", status_code=200)
@@ -48,6 +47,10 @@ async def project(request: Request, project_id: str = None):
 @app.get("/about", status_code=200)
 async def about(request: Request):
     return templates.TemplateResponse("about.html", {"request": request})
+
+@app.get("/presentations", status_code=200)
+async def presentations(request: Request):
+    return templates.TemplateResponse("presentations.html", {"request": request})
 
 @app.get("/contact", status_code=200)
 async def contact(request: Request):

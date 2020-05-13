@@ -1,16 +1,46 @@
 {% extends "base.html" %} {% block content %}
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #2f496e; color: white;">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/presentations">Presentations</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/contact">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="jumbotron text-center">
+    <h1>School of Computing and Design Online Capstone Festival</h1>
+</div>
 <div>
     <div class="card-deck row d-flex justify-content-center">
-        <div class="card">
-            <img class="card-img-top" src="https://itcdland.csumb.edu/~scd/img/s20/logos/1-VMmark3.png" alt="Team Image" style="width: 150px;">
-            <div class="card-body">
-                <h4 class="card-title"><a>Project Name</a></h4>
-                <a href="#" class="btn btn-primary">Learn More</a>
+        {% for p in projects.values() %}
+        <div>
+            <div class="card m-5">
+                <img class="card-img-top" src="{{p['image']}}" alt="Team Image" style="width: 150px;">
+                <div class="card-body">
+                    <h4 class="card-title"><a>{{ p['team']['name'] }}</a></h4>
+                    <a href="/project/{{p['id']}}" class="btn btn-primary">Learn More</a>
+                </div>
             </div>
+            <!-- <h3>p[id] == {{ p['id'] }}</h3>
+            <h3>p[image] == {{ p['image'] }}</h3>
+            <h3>p[team] == {{ p['team'] }}</h3>
+            <h3>p[team][name] == {{ p['team']['name'] }}</h3>
+            <h3>p[team][members] == {{ p['team']['members'] }}</h3> -->
         </div>
+        {% endfor %}
     </div>
-    <!-- {% for p in projects %} -->
-
-    <!-- {% endfor %} -->
 </div>
 {% endblock %}

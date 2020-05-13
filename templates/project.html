@@ -25,7 +25,7 @@
     <h1>School of Computing and Design Online Capstone Festival</h1>
 </div>
 <div>
-    <div class="card card-cascade wider reverse m-5  animated slideInUp">
+    <div class="card card-cascade wider reverse m-5 p-5  animated slideInUp">
         <div class="view view-cascade overlay center">
             <img class="card-img-top center" src="{{ team['image'] }}" style="width: 250px;" alt="Card image cap">
             <a href="#!">
@@ -42,7 +42,7 @@
         <div class="container mt-5  animated slideInUp">
             <div class="row">
                 {% for member in team['team']['members'] %}
-                <div class="card testimonial-card col-md-4 m-5 center">
+                <div class="card testimonial-card col-md-4 m-5 p-5 center">
                     <div class="card-up indigo lighten-1"></div>
                     <div class="avatar mx-auto white">
                         <img src="{{ member['image'] }}" class="rounded-circle" style="width: 200px; height: 200px;" alt="{{ member['name'] }}">

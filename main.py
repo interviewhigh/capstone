@@ -22,6 +22,7 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 PRESENTATION_TEAMS = list()
 BASE_URL = 'https://itcdland.csumb.edu/scdcapstone/'
 
+
 @app.on_event("startup")
 async def startup_event():
     await fetch_home_page()    

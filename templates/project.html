@@ -24,19 +24,79 @@
     <h1>School of Computing and Design Online Capstone Festival</h1>
 </div>
 <div>
-    <div>
-        <h3>Team Name</h3>
-        <img src="logo">
-        <h3>Project Description</h3>
+<!-- Card -->
+<div class="card card-cascade wider reverse m-5">
+
+    <!-- Card image -->
+    <div class="view view-cascade overlay center">
+      <img class="card-img-top center" src="{{ team['image'] }}" style="width: 250px;"
+        alt="Card image cap">
+      <a href="#!">
+        <div class="mask rgba-white-slight"></div>
+      </a>
     </div>
+  
+    <!-- Card content -->
+    <div class="card-body card-body-cascade text-center">
+  
+      <!-- Title -->
+      <h4 class="card-title center"><strong>{{ team['team']['name'] }}</strong></h4>
+
+      <hr style="width: 50%;"/>
+      <!-- Text -->
+      <p class="center card-text"> {{ team['team']['description'] }} </p>
+  
+    </div>
+  
+  </div>
+  <!-- Card -->
+
     <div>
-        {{% for m in members %}}
-        <div class="container card">
-            <a>Person name</a> {{ for i in m['links']}}
-            <ul><a herf src="{{i[0]}}">{{i[1]}}</a></ul>
-            {{% endfor %}}
+        <div class="container mt-5">
+            <div class="row">
+
+        {% for member in team['team']['members'] %}
+        <!-- Card -->
+<div class="card testimonial-card col-md-4 m-5 center">
+
+    <!-- Background color -->
+    <div class="card-up indigo lighten-1"></div>
+  
+    <!-- Avatar -->
+    <div class="avatar mx-auto white">
+      <img src="{{ member['image'] }}" class="rounded-circle" style="width: 200px; height: 200px;"
+        alt="{{ member['name'] }}">
+    </div>
+  
+    <!-- Content -->
+    <div class="card-body center">
+      <!-- Name -->
+      <h4 class="card-title center"> {{ member['name'] }} </h4>
+      <hr>
+        
+      <a href="{{ member['email'] }}" target="_blank" class="px-2 fa-lg li-ic"><i class="fas fa-at"></i></a>
+      {% for link in member['links'] %}
+      {% if link[0] == 'LinkedIn' %}
+        <a href="{{link[1]}}" target="_blank" class="px-2 fa-lg li-ic"><i class="fab fa-linkedin-in"></i></a>
+      {% endif %}
+      {% if link[0] == 'GitHub' %}
+        <a href="{{link[1]}}" target="_blank" class="px-2 fa-lg li-ic"><i class="fab fa-github"></i></a>
+      {% endif %}
+      {% if link[0] == 'Resume' %}
+        <a href="{{link[1]}}" target="_blank" class="px-2 fa-lg li-ic"><i class="far fa-file-alt"></i> Resume</a>
+      {% endif %}
+
+      {% endfor %}
+      
+      </p>
+    </div>
+  
+  </div>
+  <!-- Card -->
+
+        {% endfor %}
+    </div>
         </div>
-        {{% endfor %}}
     </div>
 </div>
-{{% endblock %}}
+{% endblock %}

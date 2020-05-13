@@ -26,3 +26,12 @@ footer {
     float: right;
     font-family: 'Lato', sans-serif !important;
 }
+
+.center {
+    margin: auto;
+    padding: 10px;
+}
+
+.card-text {
+    max-width: 750px;
+}

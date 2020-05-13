@@ -24,9 +24,10 @@
     <h1>School of Computing and Design Online Capstone Festival</h1>
 </div>
 <div>
-    <div class="card-deck row d-flex justify-content-center">
-        {% for p in projects.values() %}
-        <div>
+    <div class="container">
+        <div class="row">
+        {% for p in projects %}
+        <div class="col">
             <div class="card m-5">
                 <img class="card-img-top" src="{{p['image']}}" alt="Team Image" style="width: 150px;">
                 <div class="card-body">
@@ -34,13 +35,9 @@
                     <a href="/project/{{p['id']}}" class="btn btn-primary">Learn More</a>
                 </div>
             </div>
-            <!-- <h3>p[id] == {{ p['id'] }}</h3>
-            <h3>p[image] == {{ p['image'] }}</h3>
-            <h3>p[team] == {{ p['team'] }}</h3>
-            <h3>p[team][name] == {{ p['team']['name'] }}</h3>
-            <h3>p[team][members] == {{ p['team']['members'] }}</h3> -->
         </div>
         {% endfor %}
+        </div>
     </div>
 </div>
 {% endblock %}

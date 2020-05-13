@@ -41,8 +41,9 @@ async def health_check(request: Request):
 # Render student capstone page 
 @app.get("/project/{project_id}", status_code=200)
 async def project(request: Request, project_id: str = None):
+    team = next(team for team in PRESENTATION_TEAMS if team['id'] == project_id)
     return templates.TemplateResponse("project.html",
-                                      {"request": request})
+                                      {"request": request, "team": team})
 
 @app.get("/about", status_code=200)
 async def about(request: Request):
@@ -95,6 +96,8 @@ async def get_team_info():
 
 def parse_student_info(index, student):
     """
+    @param index
+        - The index of the team on the teams global variable
     @param key
         - The key to index for the PRESENTATION_TEAMS
     @param student
@@ -104,22 +107,19 @@ def parse_student_info(index, student):
     based on the key(their team) based in
     """
     info  = student.find('span', {'class': 'capstonestudentinfo'})
-    name = student.find('strong').text
+    name = student.find('strong').text.strip()
     image = info.find('img')['src']
     major = student.find('i').text
     email = parse_student_email(student.text)
-    resume, github, linkedin = get_resume_linkedin_github(student.find_all('a'))
+
     PRESENTATION_TEAMS[index]['team']['members'].append({
         'name': name,
         'image': image,
         'major': major,
         'email': email,
-        'links': [
-            ('Resume', resume),
-            ('GitHub', github),
-            ('LinkedIn', linkedin)
-        ],
+        'links': list(),
     })
+    get_resume_linkedin_github(index, student.find_all('a'))
 
 
 def parse_student_email(text):
@@ -132,21 +132,19 @@ def parse_student_email(text):
     return [entry for entry in text.split(' ') if '@' in entry][0].split('CS')[-1]
 
 
-def get_resume_linkedin_github(tags):
+def get_resume_linkedin_github(index, tags):
     """
+    @param index
+        - The index of the team on the teams global variable
     @param tags
         - All the a tags of the span
-    @returns
-        - The resume, linkedin and github profile link of the student
     """
-    resume = ''
-    linkedin = ''
-    github = ''
+
+    length = len(PRESENTATION_TEAMS[index]['team']['members']) - 1
     for tag in tags:
         if 'Resume' in tag.text:
-            resume = tag['href']
+            PRESENTATION_TEAMS[index]['team']['members'][length]['links'].append(('Resume', tag['href']))
         elif 'LinkedIn' in tag.text:
-            linkedin = tag['href']
+            PRESENTATION_TEAMS[index]['team']['members'][length]['links'].append(('LinkedIn', tag['href']))
         elif 'GitHub' in tag.text:
-            github = tag['href']
-    return resume, github, linkedin
+            PRESENTATION_TEAMS[index]['team']['members'][length]['links'].append(('GitHub', tag['href']))

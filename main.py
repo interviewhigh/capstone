@@ -17,7 +17,6 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 
 @app.on_event("startup")
 async def startup_event():
-    
     return
 
 # Index entrypoint for website.
@@ -31,12 +30,20 @@ async def health_check(request: Request):
     return ""
 
 # Render student capstone page 
-@app.get("/project/{project_id}")
+@app.get("/project/{project_id}", status_code=200)
 async def project(request: Request, project_id: str = None):
     return templates.TemplateResponse("project.html",
                                       {"request": request})
 
+@app.get("/about", status_code=200)
+async def about(request: Request):
+    return templates.TemplateResponse("about.html", {"request": request})
+
+@app.get("/contact", status_code=200)
+async def contact(request: Request):
+    return templates.TemplateResponse("contact.html", {"request": request})
+
 # 404 error handling
-@app.get("/.*")
+@app.get("/.*", status_code=404)
 async def err_render(request: Request):
     return templates.TemplateResponse("404.html", {"request": request})

@@ -24,6 +24,19 @@
     <h1>School of Computing and Design Online Capstone Festival</h1>
 </div>
 <div>
-
+    <div>
+        <h3>Team Name</h3>
+        <img src="logo">
+        <h3>Project Description</h3>
+    </div>
+    <div>
+        {{% for m in members %}}
+        <div class="container card">
+            <a>Person name</a> {{ for i in m['links']}}
+            <ul><a herf src="{{i[0]}}">{{i[1]}}</a></ul>
+            {{% endfor %}}
+        </div>
+        {{% endfor %}}
+    </div>
 </div>
-{% endblock %}
+{{% endblock %}}

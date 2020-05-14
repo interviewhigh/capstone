@@ -33,11 +33,12 @@
     </div>
 
     <div>
-        <h2 class="center-video-h2">Video Presentation</h2>
         {% if team['youtube'] %}
-            <iframe class="center-video" width="560" height="315" src="https://www.youtube.com/embed/{{ team['youtube'] }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+            <h2 class="center-video-h2">Video Presentation</h2>
+            <iframe class="center-video w-75" height="315" src="https://www.youtube.com/embed/{{ team['youtube'] }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
         {% elif team['google_drive_video'] %}
-            <iframe class="center-video" src="https://drive.google.com/file/d/{{ team['google_drive_video'] }}/preview" width="560" height="315"></iframe>
+            <h2 class="center-video-h2">Video Presentation</h2>
+            <iframe class="center-video w-75" src="https://drive.google.com/file/d/{{ team['google_drive_video'] }}/preview" height="315"></iframe>
         {% endif %}
 
     </div>

@@ -1,0 +1,24 @@
+{% extends "base.html" %} 
+{% block content %}
+    <div class="jumbotron text-center">
+        <h1>School of Computing and Design Online Capstone Festival</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+        {% for item in archive %}
+        <div class="col-12 col-md-4 mb-5">
+            <div class="card h-100 shadow-sm animated slideInUp">
+                <!-- <img class="card-img-top center pt-5 img-fluid" src="{% if item['image'] %} /static/{{ item['image'] }} {% else %} /static/img/archive/default.png {% endif %}" alt="Team Image" style="width: 150px; background-color: #2f496e;"> -->
+                <div class="card-body d-flex flex-column h-100">
+                    <h4 class="text-center"><a>Capstone Festival <br> {{ item['semester'] }} {{ item['year'] }}</a></h4>
+                    <div class="mt-auto">
+                        <hr class="w-100">
+                        <a href="{{item['link']}}" class="btn btn-block btn-primary learn-more-btn">Check them out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        </div>
+    </div>
+{% endblock %}

@@ -1,3 +1,82 @@
+##########################################################################################
+## Archive
+##########################################################################################
+archive = [
+    {
+        "semester": "Fall",
+        "year": 2019,
+        "link": "https://itcdland.csumb.edu/scdcapstone/archive/project_F19.php",
+    },
+    {
+        "semester": "Spring",
+        "year": 2019,
+        "link": "https://itcdland.csumb.edu/scdcapstone/archive/project_S19.php",
+    },
+    {
+        "semester": "Fall",
+        "year": 2018,
+        "link": "https://itcdland.csumb.edu/scdcapstone/archive/project_F18.php",
+    },
+    {
+        "semester": "Spring",
+        "year": 2018,
+        "link": "https://itcdland.csumb.edu/scdcapstone/archive/project_S18.php",
+    },
+    {
+        "semester": "Fall",
+        "year": 2017,
+        "link": "https://itcdland.csumb.edu/scdcapstone/archive/project_F17.php",
+    },
+    {
+        "semester": "Spring",
+        "year": 2017,
+        "link": "https://itcdland.csumb.edu/scdcapstone/archive/project_S17.php",
+    },
+    {
+        "semester": "Fall",
+        "year": 2016,
+        "link": "https://itcdland.csumb.edu/scdcapstone/archive/project_F16.php",
+    },
+    {
+        "semester": "Spring",
+        "year": 2016,
+        "link": "https://itcdland.csumb.edu/~ccozza/capstone/php/home.php",
+    },
+    {
+        "semester": "",
+        "year": 2015,
+        "link": "https://itcdland.csumb.edu/~ssmith/",
+    },
+    {
+        "semester": "",
+        "year": 2014,
+        "link": "https://itcdland.csumb.edu/2014s_capstone/",
+    },
+    {
+        "semester": "",
+        "year": 2013,
+        "link": "https://itcdland.csumb.edu/2013s_capstone/",
+    },
+    {
+        "semester": "",
+        "year": 2012,
+        "link": "https://itcdland.csumb.edu/2012s_capstone/",
+    },
+        {
+        "semester": "Fall",
+        "year": 2011,
+        "link": "https://itcdland.csumb.edu/2011f_capstone/",
+    },
+    {
+        "semester": "Spring",
+        "year": 2011,
+        "link": "https://itcdland.csumb.edu/2011s_capstone/",
+    },
+]
+
+##########################################################################################
+## PRESENTATION_TEAMS
+##########################################################################################
 data = [
     {
         "id": "15",
@@ -1668,7 +1747,7 @@ data = [
             "members": [
                 {
                     "name": "Carlos Estrada",
-                    "image": "img/carlos_estrada.jpeg",
+                    "image": "img/student/carlos_estrada.jpeg",
                     "major": "CS",
                     "email": "caestrada@csumb.edu",
                     "links": [
@@ -1708,7 +1787,7 @@ data = [
                 },
                 {
                     "name": "Mike Menendez",
-                    "image": "img/mike_menendez.jpeg",
+                    "image": "img/student/mike_menendez.jpeg",
                     "major": "CS",
                     "email": "mmenendez@csumb.edu",
                     "links": [
@@ -1760,7 +1839,7 @@ data = [
                 },
                 {
                     "name": "Vaughn Andrews",
-                    "image": "img/vaughn_andrews.jpeg",
+                    "image": "img/student/vaughn_andrews.jpeg",
                     "major": "CS",
                     "email": "vandrews@csumb.edu",
                     "links": [

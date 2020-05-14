@@ -62,11 +62,13 @@ body, body.swal2-height-auto {
 }
 
 main {
-    /* flex: 1 0 auto; */
+    flex: 1 0 auto;
+    min-height: calc(100vh - 100px);
 }
 
 footer {
     background-color: var(--csumb-blue);
+    height: 100px;
 }
 
 @media screen and (min-width: 0) and (max-width: 751) {

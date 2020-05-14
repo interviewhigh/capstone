@@ -9,7 +9,6 @@ from fastapi.templating import Jinja2Templates
 import aiohttp
 import requests
 from bs4 import BeautifulSoup as bs
-import pprint
 from constants import data
 
 # Initialize application
@@ -31,7 +30,6 @@ async def startup_event():
 # Index entrypoint for website.
 @app.get("/", status_code=200)
 async def index(request: Request):
-    print(PRESENTATION_TEAMS)
     return templates.TemplateResponse("index.html", {
         "request": request, 
         "projects": PRESENTATION_TEAMS,
@@ -162,9 +160,3 @@ def get_resume_linkedin_github(index, tags):
             PRESENTATION_TEAMS[index]['team']['members'][length]['links'].append(('LinkedIn', tag['href']))
         elif 'GitHub' in tag.text:
             PRESENTATION_TEAMS[index]['team']['members'][length]['links'].append(('GitHub', tag['href']))
-
-
-async def load_data():
-    with open('constants.json') as file:
-        PRESENTATION_TEAMS = list(json.load(file))
-    print(PRESENTATION_TEAMS[0])

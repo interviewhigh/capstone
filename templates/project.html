@@ -20,9 +20,22 @@
         </div>
     </div>
     <div class="row">
-        {% for member in team['team']['members'] %} {% if team['team']['members']|length % 3 == 0 %} {% include 'three_row_card.html' %} {% elif team['team']['members']|length % 2 == 0 %} {% include 'two_row_card.html' %} {% else %}
-        <!-- Any other combos use the column layout -->
-        {% include 'three_row_card.html' %} {% endif %} {% endfor %}
+        {% for member in team['team']['members'] %} 
+            {% if team['team']['members']|length  == 7 %} 
+                {% if loop.index0 < 3 %}
+                    {% include 'three_row_card.html' %}
+                {% else %}
+                    {% include 'two_row_card.html' %} 
+                {% endif %}
+            {% elif team['team']['members']|length % 3 == 0 %} 
+                {% include 'three_row_card.html' %}
+            {% elif team['team']['members']|length % 2 == 0 %} 
+                {% include 'two_row_card.html' %} 
+            {% else %}
+                <!-- Any other combos use the column layout -->
+                {% include 'three_row_card.html' %} 
+            {% endif %} 
+        {% endfor %}
     </div>
 
     <h2 class="center-video-h2 d-flex justify-content-center">Video Presentation</h2>

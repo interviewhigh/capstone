@@ -1663,26 +1663,26 @@ data = [
         "youtube": "DdUWnzpMuhc",
         "zoom_number": 10,
         "team": {
-            "name": "Interview High 1",
+            "name": "Interview High",
             "description": "Interview High is a platform created for teachers that helps automate grading and plagiarism detection. Students can submit code, keep track of submission history and check their grades. Teachers can assign question sets, view student grades and observe valuable performance metrics that help them better understand how their students are progressing in the course.",
             "members": [
                 {
-                    "name": "Torin Foss",
-                    "image": "https://itcdland.csumb.edu/~scd/img/s20/Foss-42.jpg",
+                    "name": "Carlos Estrada",
+                    "image": "img/carlos_estrada.jpeg",
                     "major": "CS",
-                    "email": "tfoss@csumb.edu",
+                    "email": "caestrada@csumb.edu",
                     "links": [
                         [
                             "Resume",
-                            "https://docs.google.com/document/d/1tj_MSH-k8En3gf9xIvw12eLXy0XyQyAUCMBpvhwhf2o/edit?usp=sharing"
+                            "https://caestrada.com/assets/files/estrada-resume.pdf"
                         ],
                         [
                             "LinkedIn",
-                            "https://www.linkedin.com/in/trfoss"
+                            "https://www.linkedin.com/in/cestrrada/"
                         ],
                         [
                             "GitHub",
-                            "https://github.com/trfoss"
+                            "https://github.com/cestrrada"
                         ]
                     ]
                 },
@@ -1707,38 +1707,6 @@ data = [
                     ]
                 },
                 {
-                    "name": "Carlos Estrada",
-                    "image": "img/carlos_estrada.jpeg",
-                    "major": "CS",
-                    "email": "caestrada@csumb.edu",
-                    "links": [
-                        [
-                            "Resume",
-                            "https://caestrada.com/assets/files/estrada-resume.pdf"
-                        ],
-                        [
-                            "LinkedIn",
-                            "https://www.linkedin.com/in/cestrrada/"
-                        ],
-                        [
-                            "GitHub",
-                            "https://github.com/cestrrada"
-                        ]
-                    ]
-                }
-            ]
-        }
-    },
-    {
-        "id": "11",
-        "image": "https://itcdland.csumb.edu/~scd/img/s20/logos/11-logo.png",
-        "youtube": "DdUWnzpMuhc",
-        "zoom_number": 10,
-        "team": {
-            "name": "Interview High 2",
-            "description": "Interview High is a platform created for teachers that helps automate grading and plagiarism detection. Students can submit code, keep track of submission history and check their grades. Teachers can assign question sets, view student grades and observe valuable performance metrics that help them better understand how their students are progressing in the course.",
-            "members": [
-                {
                     "name": "Mike Menendez",
                     "image": "img/mike_menendez.jpeg",
                     "major": "CS",
@@ -1755,6 +1723,54 @@ data = [
                         [
                             "GitHub",
                             "https://github.com/mike-menendez"
+                        ]
+                    ]
+                },
+                {
+                    "name": "Trent Schwartz",
+                    "image": "https://itcdland.csumb.edu/~scd/img/s20/Schwartz-73.jpg",
+                    "major": "CS",
+                    "email": "tschwartz@csumb.edu",
+                    "links": [
+                        [
+                            "Resume",
+                            "https://drive.google.com/open?id=10Tew2JTnJ3_jjy5H5PpU7VY7JFhovgqr"
+                        ]
+                    ]
+                }, 
+                {
+                    "name": "Torin Foss",
+                    "image": "https://itcdland.csumb.edu/~scd/img/s20/Foss-42.jpg",
+                    "major": "CS",
+                    "email": "tfoss@csumb.edu",
+                    "links": [
+                        [
+                            "Resume",
+                            "https://docs.google.com/document/d/1tj_MSH-k8En3gf9xIvw12eLXy0XyQyAUCMBpvhwhf2o/edit?usp=sharing"
+                        ],
+                        [
+                            "LinkedIn",
+                            "https://www.linkedin.com/in/trfoss"
+                        ],
+                        [
+                            "GitHub",
+                            "https://github.com/trfoss"
+                        ]
+                    ]
+                },
+                {
+                    "name": "Vaughn Andrews",
+                    "image": "img/vaughn_andrews.jpeg",
+                    "major": "CS",
+                    "email": "vandrews@csumb.edu",
+                    "links": [
+                        [
+                            "Resume",
+                            "https://docs.google.com/document/d/1sIQf9mIdwslwsbAfZ12eucCaxIifyQOzl6H2zKxX5r4/edit?usp=sharing"
+                        ],
+                        [
+                            "LinkedIn",
+                            "https://www.linkedin.com/in/vaughan-andrews-6a9670139/"
                         ]
                     ]
                 },
@@ -1778,37 +1794,89 @@ data = [
                         ]
                     ]
                 },
-                {
-                    "name": "Trent Schwartz",
-                    "image": "https://itcdland.csumb.edu/~scd/img/s20/Schwartz-73.jpg",
-                    "major": "CS",
-                    "email": "tschwartz@csumb.edu",
-                    "links": [
-                        [
-                            "Resume",
-                            "https://drive.google.com/open?id=10Tew2JTnJ3_jjy5H5PpU7VY7JFhovgqr"
-                        ]
-                    ]
-                },
-                {
-                    "name": "Vaughn Andrews",
-                    "image": "img/vaughn_andrews.jpeg",
-                    "major": "CS",
-                    "email": "vandrews@csumb.edu",
-                    "links": [
-                        [
-                            "Resume",
-                            "https://docs.google.com/document/d/1sIQf9mIdwslwsbAfZ12eucCaxIifyQOzl6H2zKxX5r4/edit?usp=sharing"
-                        ],
-                        [
-                            "LinkedIn",
-                            "https://www.linkedin.com/in/vaughan-andrews-6a9670139/"
-                        ]
-                    ]
-                }
             ]
         }
     },
+    # {
+    #     "id": "11",
+    #     "image": "https://itcdland.csumb.edu/~scd/img/s20/logos/11-logo.png",
+    #     "youtube": "DdUWnzpMuhc",
+    #     "zoom_number": 10,
+    #     "team": {
+    #         "name": "Interview High 2",
+    #         "description": "Interview High is a platform created for teachers that helps automate grading and plagiarism detection. Students can submit code, keep track of submission history and check their grades. Teachers can assign question sets, view student grades and observe valuable performance metrics that help them better understand how their students are progressing in the course.",
+    #         "members": [
+    #             {
+    #                 "name": "Mike Menendez",
+    #                 "image": "img/mike_menendez.jpeg",
+    #                 "major": "CS",
+    #                 "email": "mmenendez@csumb.edu",
+    #                 "links": [
+    #                     [
+    #                         "Resume",
+    #                         "https://drive.google.com/file/d/1QWOd2T3_AwLIMgluBxTfQMeueVLniEFn/view?usp=sharing"
+    #                     ],
+    #                     [
+    #                         "LinkedIn",
+    #                         "https://www.linkedin.com/in/michael-menendez-321282a8/"
+    #                     ],
+    #                     [
+    #                         "GitHub",
+    #                         "https://github.com/mike-menendez"
+    #                     ]
+    #                 ]
+    #             },
+    #             {
+    #                 "name": "Shaun Kallis",
+    #                 "image": "https://itcdland.csumb.edu/~scd/img/s20/Kallis-58.png",
+    #                 "major": "CS",
+    #                 "email": "skallis@csumb.edu",
+    #                 "links": [
+    #                     [
+    #                         "Resume",
+    #                         "https://docs.google.com/document/d/1XGZ_T3FoELO2DQfrKPlU3-RICBz95DUqqS0K7FWXBro/edit?usp=sharing"
+    #                     ],
+    #                     [
+    #                         "LinkedIn",
+    #                         "http://linkedin.com/in/shaun-kallis-626bb052"
+    #                     ],
+    #                     [
+    #                         "GitHub",
+    #                         "https://github.com/ShaunKallis"
+    #                     ]
+    #                 ]
+    #             },
+    #             {
+    #                 "name": "Trent Schwartz",
+    #                 "image": "https://itcdland.csumb.edu/~scd/img/s20/Schwartz-73.jpg",
+    #                 "major": "CS",
+    #                 "email": "tschwartz@csumb.edu",
+    #                 "links": [
+    #                     [
+    #                         "Resume",
+    #                         "https://drive.google.com/open?id=10Tew2JTnJ3_jjy5H5PpU7VY7JFhovgqr"
+    #                     ]
+    #                 ]
+    #             },
+    #             {
+    #                 "name": "Vaughn Andrews",
+    #                 "image": "img/vaughn_andrews.jpeg",
+    #                 "major": "CS",
+    #                 "email": "vandrews@csumb.edu",
+    #                 "links": [
+    #                     [
+    #                         "Resume",
+    #                         "https://docs.google.com/document/d/1sIQf9mIdwslwsbAfZ12eucCaxIifyQOzl6H2zKxX5r4/edit?usp=sharing"
+    #                     ],
+    #                     [
+    #                         "LinkedIn",
+    #                         "https://www.linkedin.com/in/vaughan-andrews-6a9670139/"
+    #                     ]
+    #                 ]
+    #             }
+    #         ]
+    #     }
+    # },
     {
         "id": "19",
         "image": "https://itcdland.csumb.edu/~scd/img/s20/logos/19-logo.png",

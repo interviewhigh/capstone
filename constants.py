@@ -437,7 +437,7 @@ data = [
     {
         "id": "22",
         "image": "https://itcdland.csumb.edu/~scd/img/s20/logos/22-seefood.png",
-        "google_drive_video": "1M85P9mYkoIhu7oTYuYZsw1Pm54SACkB6",
+        "google_drive_video": "1V0k2laUMnWLfNrkrxeiRU0tui_bUk4g5",
         "zoom_number": 22,
         "team": {
             "name": "SeeFood Web Data Scraping and Menu Finder",

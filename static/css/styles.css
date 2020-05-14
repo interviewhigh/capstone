@@ -1,30 +1,18 @@
-footer {
-    background: #2f496e;
-    height: 100px;
-    clear: both;
+:root {
+    --csumb-blue: #2f496e;
 }
 
 .jumbotron {
-    background-color: #2f496e;
+    background-color: var(--csumb-blue);
     color: white;
 }
 
 .nav-link {
-    background-color: #2f496e;
-}
-
-#footertext {
-    color: white;
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 40px;
-    font-size: 14px;
-    float: right;
-    font-family: 'Lato', sans-serif !important;
+    background-color: var(--csumb-blue);
 }
 
 .btn-primary {
-    background-color: #2f496e !important;
+    background-color: var(--csumb-blue) !important;
 }
 
 .credits {
@@ -50,4 +38,28 @@ footer {
 
 .learn-more-btn {
     bottom: 0;
+}
+
+/* Footer fix */
+html, body {
+    height: 100%;
+}
+
+body, body.swal2-height-auto {
+    display: flex;
+    flex-direction: column;
+    height: 100% !important;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    background-color: var(--csumb-blue);
+    flex-shrink: 0;
+}
+
+#footer-text p {
+    margin-bottom: 0;
 }

@@ -60,13 +60,26 @@
             </ul>
         </div>
     </nav>
-    {% block content %} {% endblock %}
-    <div class="mt-5"></div>
-    <footer class="">
-        <img src="https://itcdland.csumb.edu/scdcapstone/img/misc./csumb_logo_white.png" style="height:75px; margin-top:15px; margin-left:20px;">
-        <button class="btn btn-light credits">Site Credits</button>
-        <div id="footertext">
-            100 Campus Center <br> Seaside, CA 93955 <br> 831 - 582 - 4741
+    <main>
+        {% block content %} {% endblock %}
+    </main>
+    <footer class="py-4 py-md-3">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <img src="https://itcdland.csumb.edu/scdcapstone/img/misc./csumb_logo_white.png" style="height:75px">
+                </div>
+                <div class="col-12 col-md-4 text-center">
+                    <button class="btn btn-light credits mx-auto">Site Credits</button>
+                </div>
+                <div class="col-12 col-md-4 text-center text-md-right">
+                    <div id="footer-text" class="text-white mt-3 mt-md-0">
+                        <p>100 Campus Center</p>
+                        <p>Seaside, CA 93955</p>
+                        <p>(831) 582 - 4741</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 </body>

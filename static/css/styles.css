@@ -76,18 +76,12 @@ article {
     border-radius: 10px;
 }
 
-.centered-thing {
-    position: relative;
-    margin: auto;
-}
-
-.center-video {
-    display: block;
-    margin: auto;
-    padding-bottom: 20px;
-}
-
 .center-video-h2 {
     text-align: center;
     font-family: Roboto, sans-serif;
+}
+
+.video-container {
+    width: 100%;
+    margin: 0 auto;
 }

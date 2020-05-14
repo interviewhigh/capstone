@@ -29,6 +29,8 @@ async def startup_event():
     for team in PRESENTATION_TEAMS:
         for student in team['team']['members']:
             student['links'].sort(key=lambda k: k[0])
+    PRESENTATION_TEAMS.insert(0, PRESENTATION_TEAMS[9])
+    PRESENTATION_TEAMS.pop(10)
 
 # Index entrypoint for website.
 @app.get("/", status_code=200)

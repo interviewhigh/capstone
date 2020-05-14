@@ -25,14 +25,17 @@ BASE_URL = 'https://itcdland.csumb.edu/scdcapstone/'
 
 @app.on_event("startup")
 async def startup_event():
-    pass
+    PRESENTATION_TEAMS.sort(key=lambda k: k['zoom_number'])
+    for team in PRESENTATION_TEAMS:
+        for student in team['team']['members']:
+            student['links'].sort(key=lambda k: k[0])
 
 # Index entrypoint for website.
 @app.get("/", status_code=200)
 async def index(request: Request):
     return templates.TemplateResponse("index.html", {
         "request": request, 
-        "projects": sorted(PRESENTATION_TEAMS, key=lambda k: k['zoom_number']) ,
+        "projects": PRESENTATION_TEAMS,
         "page": "home"
     })
 

@@ -32,13 +32,13 @@
         {% endfor %}
     </div>
 
-    <div class="mx-auto video-container">
+    <h2 class="center-video-h2">Video Presentation</h2>
+
+    <div class="embed-responsive-16by9 pb-5 d-flex justify-content-center">
         {% if team['youtube'] %}
-            <h2 class="center-video-h2">Video Presentation</h2>
-            <iframe class="w-75" height="315" src="https://www.youtube.com/embed/{{ team['youtube'] }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+            <iframe class="d-flex justify-content-center z-depth-4 hoverable w-75" height="315" src="https://www.youtube.com/embed/{{ team['youtube'] }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
         {% elif team['google_drive_video'] %}
-            <h2 class="center-video-h2">Video Presentation</h2>
-            <iframe class="w-75" src="https://drive.google.com/file/d/{{ team['google_drive_video'] }}/preview" height="315"></iframe>
+            <iframe class="d-flex justify-content-center z-depth-4 hoverable w-75" src="https://drive.google.com/file/d/{{ team['google_drive_video'] }}/preview" height="315"></iframe>
         {% endif %}
 
     </div>

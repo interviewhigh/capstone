@@ -1747,7 +1747,7 @@ data = [
                     "name": "Vaughn Andrews",
                     "image": "img/vaughn_andrews.jpeg",
                     "major": "CS",
-                    "email": "",
+                    "email": "vandrews@csumb.edu",
                     "links": [
                         [
                             "Resume",

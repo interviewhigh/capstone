@@ -5,6 +5,7 @@
 .jumbotron {
     background-color: var(--csumb-blue);
     color: white;
+    border-radius: 0;
 }
 
 .nav-link {
@@ -25,7 +26,6 @@
 
 .center {
     margin: auto;
-    /* padding: 10px; */
 }
 
 .card {
@@ -67,4 +67,11 @@ footer {
 #footer-text p {
     font-size: 14px;
     margin-bottom: 0;
+}
+
+article {
+    background-color: #fff;
+    padding: 20px;
+    margin: 0 20px 20px 20px;
+    border-radius: 10px;
 }

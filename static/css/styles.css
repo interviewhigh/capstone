@@ -85,3 +85,9 @@ article {
     width: 75%;
     margin: 0 auto;
 }
+
+.zoom-container {
+    padding-top: 10px;
+    text-align: center;
+    margin: 0 auto;
+}

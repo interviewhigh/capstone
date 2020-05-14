@@ -32,7 +32,7 @@ async def startup_event():
 async def index(request: Request):
     return templates.TemplateResponse("index.html", {
         "request": request, 
-        "projects": PRESENTATION_TEAMS,
+        "projects": sorted(PRESENTATION_TEAMS, key=lambda k: k['zoom_number']) ,
         "page": "home"
     })
 

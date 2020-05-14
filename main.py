@@ -10,6 +10,7 @@ import aiohttp
 import requests
 from bs4 import BeautifulSoup as bs
 import pprint
+from constants import data
 
 # Initialize application
 app = FastAPI()
@@ -19,19 +20,18 @@ templates = Jinja2Templates(directory="templates")
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 # Global variables to fill at launch
-PRESENTATION_TEAMS = list()
+PRESENTATION_TEAMS = data
 BASE_URL = 'https://itcdland.csumb.edu/scdcapstone/'
 
 
 @app.on_event("startup")
 async def startup_event():
-    await fetch_home_page()    
-    await get_team_info()
-    return
+    pass
 
 # Index entrypoint for website.
 @app.get("/", status_code=200)
 async def index(request: Request):
+    print(PRESENTATION_TEAMS)
     return templates.TemplateResponse("index.html", {
         "request": request, 
         "projects": PRESENTATION_TEAMS,
@@ -162,3 +162,9 @@ def get_resume_linkedin_github(index, tags):
             PRESENTATION_TEAMS[index]['team']['members'][length]['links'].append(('LinkedIn', tag['href']))
         elif 'GitHub' in tag.text:
             PRESENTATION_TEAMS[index]['team']['members'][length]['links'].append(('GitHub', tag['href']))
+
+
+async def load_data():
+    with open('constants.json') as file:
+        PRESENTATION_TEAMS = list(json.load(file))
+    print(PRESENTATION_TEAMS[0])

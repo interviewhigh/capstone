@@ -40,12 +40,16 @@
     bottom: 0;
 }
 
+
 /* Footer fix */
-html, body {
+
+html,
+body {
     height: 100%;
 }
 
-body, body.swal2-height-auto {
+body,
+body.swal2-height-auto {
     display: flex;
     flex-direction: column;
     height: 100% !important;

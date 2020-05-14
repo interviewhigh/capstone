@@ -1578,7 +1578,7 @@ data = [
                         ],
                         [
                             "LinkedIn",
-                            "www.linkedin.com/in/ jeremy-shaw-072413159"
+                            "https://www.linkedin.com/in/jeremy-shaw-072413159"
                         ],
                         [
                             "GitHub",

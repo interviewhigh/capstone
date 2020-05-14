@@ -2,6 +2,7 @@ data = [
     {
         "id": "15",
         "image": "https://itcdland.csumb.edu/~scd/img/s20/logos/15-colonysims.PNG",
+        "google_drive_video": "11Url8y2ymFRNPsQRJlp4lVXduABsmu5q",
         "team": {
             "name": "ColonySim",
             "description": "Survival and resource management game with a futuristic aesthetic.",
@@ -48,6 +49,7 @@ data = [
     {
         "id": "24",
         "image": "https://itcdland.csumb.edu/~scd/img/s20/logos/24-stoqs.png",
+        "youtube": "e6sRN50yVXc",
         "team": {
             "name": "STOQS - 3D Sensor Data",
             "description": "The spatial temporal oceanographic query system also known as STOQS is an ongoing project created by the Monterey Bay Aquarium Research Institute used to record valuable data for scientist all over the world. Our task behind this project is to allow users to view data through 3D rendered dots that represent real accurate data with meaningful color representations that depict temperatures in the water on a 3D map of the Monterey Bay.",
@@ -200,6 +202,7 @@ data = [
     {
         "id": "4",
         "image": "https://itcdland.csumb.edu/~scd/img/s20/logos/4-resplandecer.jpg",
+        "google_drive_video": "1zijyXB4-mAajWXuV5I4fCLA1zd44RwqL",
         "team": {
             "name": "Resplandecer",
             "description": "Radio Resplandecer is a local Spanish language Christian radio station in King City that provides access to biblical teachings to communities near the area. Currently, Radio Resplandecer has both a website and an Android app. Our objective has been to create the iOS version that mirrors the functionality of the android app to increase accessibility for the public.",
@@ -274,6 +277,7 @@ data = [
     {
         "id": "14",
         "image": "https://itcdland.csumb.edu/~scd/img/s20/logos/14-Weather.png",
+        "youtube": "tzoHHV6Uqa0",
         "team": {
             "name": "Weather Data Interface",
             "description": "We created a one-page web application with a friendly graphical user interface, intended for use by meteorologists that want to quickly and easily create files containing presets of weather data to be used in a weather simulator to aid forecasting.",
@@ -348,6 +352,7 @@ data = [
     {
         "id": "18",
         "image": "https://itcdland.csumb.edu/~scd/img/s20/logos/18-SeeFood.png",
+        "youtube": "ndp3i1R6QHE",
         "team": {
             "name": "SeeFood Android Application",
             "description": "Our team developed an android application which allows restaurant owners to upload their business' information and menus, providing pictures of each menu item. The goal is to give restaurant owners a more-cost effective solution to advertising their business and showcasing their menu, as well as to provide customers with a chance to see what they are ordering before they do so.",
@@ -426,6 +431,7 @@ data = [
     {
         "id": "22",
         "image": "https://itcdland.csumb.edu/~scd/img/s20/logos/22-seefood.png",
+        "google_drive_video": "1M85P9mYkoIhu7oTYuYZsw1Pm54SACkB6",
         "team": {
             "name": "SeeFood Web Data Scraping and Menu Finder",
             "description": "Our project provides customers with a list of restaurants, so that they can make informed decisions about where they want to eat. Many times people don't know exactly what the menu of restaurants contain and this can be a major problem for people with allergies. The data collected will be used to show customers what ingredients are used at what restaurants.",
@@ -504,6 +510,7 @@ data = [
     {
         "id": "17",
         "image": "https://itcdland.csumb.edu/~scd/img/s20/logos/17-flooding.png",
+        "youtube": "LL1bZlUmNic",
         "team": {
             "name": "Flooding Visualization - Link-State Networks",
             "description": "A proof-of-concept web app which visualizes IS-IS flooding on a network topology, thus streamlining the debugging process for engineers.",
@@ -582,6 +589,7 @@ data = [
     {
         "id": "8",
         "image": "https://itcdland.csumb.edu/~scd/img/s20/logos/8-rockImmortal.png",
+        "google_drive_video": "13a6h-_A80qdRv8PHRgTdcqz3DnDZTXY1",
         "team": {
             "name": "Rock Immortal Ticket Sales Web App",
             "description": "An open-source scalable and secure ticket sales web application for live events, which is able to be implemented into Rock Immortal's existing website. Our web application aims to provide owners with more control, by offering complete authority over the details of their events.",
@@ -664,6 +672,7 @@ data = [
     {
         "id": "9",
         "image": "https://itcdland.csumb.edu/~scd/img/s20/logos/9-GAAME.png",
+        "youtube": "3SwCO93iNis",
         "team": {
             "name": "Google App for Attention Management Excellence (GAAME): Faculty Edition",
             "description": "Google add-on extension that will automate manual steps to provide faculty with insight into student progress with the goal of assisting with their attention management and procrastination, so students perform high-quality work.",
@@ -734,6 +743,7 @@ data = [
     {
         "id": "21",
         "image": "https://itcdland.csumb.edu/~scd/img/s20/logos/21-berry.png",
+        "youtube": "pPq2ptkqkdo",
         "team": {
             "name": "Berry Harvest Optimizer",
             "description": "Blueberries are harvested by shaking the plant with a harvesting machine. Depending on the level of shaking, it causes different amounts of blueberries to fall onto the conveyor belts. Some of these berries are green and unripened, and do not ripen after harvesting. Furthermore, the machines have to be checked and adjusted manually, and unripe berries have to be counted manually. This leads to food and time wastage. The objective of the project is to reduce food waste by lowering the amount of harvested unripe berries. This will be achieved through computer vision software deployed on a Raspberry Pi connected to a camera, which will send data to Firebase to store the data. The data is then displayed on a web page built using ReactJS.",
@@ -812,6 +822,7 @@ data = [
     {
         "id": "20",
         "image": "https://itcdland.csumb.edu/~scd/img/s20/logos/20-zeromq3.png",
+        "youtube": "jpVjkeTqjiw",
         "team": {
             "name": "ZeroMQ/HTTPS Bridge",
             "description": "A software bridge to tunnel ZeroMQ frames over HTTPS in pure Python",
@@ -878,6 +889,7 @@ data = [
     {
         "id": "16",
         "image": "https://itcdland.csumb.edu/~scd/img/s20/logos/16-GAAME.png",
+        "youtube": "4Xoq40Dio5o",
         "team": {
             "name": "GAAME - Student Edition",
             "description": "We developed a google add-on to help students manage their professional and personal schedules to prevent procrastination. We implemented an automated way for students to create milestones, so students can divide their assignments and reduce the stress procrastination can have on their lives. Our app utilizes the google apps to create an all in one easy to use google add-on.",
@@ -960,6 +972,7 @@ data = [
     {
         "id": "1",
         "image": "https://itcdland.csumb.edu/~scd/img/s20/logos/1-VMmark3.png",
+        "youtube": "fDKiLwKK2F0",
         "team": {
             "name": "VMmark 3 Web Interface",
             "description": "The VMmark 3 Configuration Deployment Execution and Results (CDER) Wizard allows users to run the VMmark3 benchmark via a user-friendly interface instead of modifying local files manually and using the command line. The purpose of the web interface is to avoid user error by only displaying valid options to modify the VMmark3.properties file as well as speeding up the process of modifying the file by displaying the user options as a web form rather than requiring the user to understand where and how to edit the lengthy properties file. The web interface allows the user to modify the properties file for deployment, to deploy additional tiles, to run the benchmark and to view the results in a table view based on the storage in local folders and multiple folders, making it easier to compare and analyze results.",
@@ -1038,6 +1051,7 @@ data = [
     {
         "id": "12",
         "image": "https://itcdland.csumb.edu/~scd/img/s20/logos/12-Iperf.jpg",
+        "google_drive_video": "1Bset64n8wK-9pfs7aLEHQoD-BWo7If8q",
         "team": {
             "name": "Comparison of iPerf 2 & iPerf 3 Network Performance Testing",
             "description": "The CalSPEED study for the California Public Utilities Commission was designed using iPerf 2. There is another software, iPerf 3, which has been developed by a separate group. This paper documents results of extensive empirical testing of both software run on a variety of devices and network conditions to determine whether the choice of software has any significant effect on the recorded measurement",
@@ -1103,6 +1117,7 @@ data = [
     {
         "id": "3",
         "image": "https://itcdland.csumb.edu/~scd/img/s20/logos/3-dotinImage.jpeg",
+        "youtube": "A17nrnj_FcI",
         "team": {
             "name": "CV and Job Description Parsing Using Julia",
             "description": "The project goal was to be able to create a natural language pipeline for extracting information from resumes, with similar or potentially improved performance compared to other programming languages.",
@@ -1185,6 +1200,7 @@ data = [
     {
         "id": "13",
         "image": "https://itcdland.csumb.edu/~scd/img/s20/logos/13-dns-query.png",
+        "youtube": "rp56qzLf59E",
         "team": {
             "name": "DNS Query Trace Visualization Tool",
             "description": "A visual trace of the steps involved in different DNS queries created by reading output from the dnsviz command line tool. Aimed to aid troubleshooting and the visualization of networking problems by providing an easy to understand graph with information at each step of the process. The visual will allow a person to hover over a node to learn more about that step in the process including A records, AAAA records, and glue records.",
@@ -1247,6 +1263,7 @@ data = [
     {
         "id": "2",
         "image": "https://itcdland.csumb.edu/~scd/img/s20/logos/2-agflow.png",
+        "youtube": "m4aaXPH4sDM",
         "team": {
             "name": "Agflow",
             "description": "Agflow is an intuitive and seamless way of communicating data between the important proponents of the agricultural business. From farm to sales desk, Agflow is an application that is used for data transmission and also quality tracking to ensure the entire process is monitored and controlled.",
@@ -1313,6 +1330,7 @@ data = [
     {
         "id": "7",
         "image": "https://itcdland.csumb.edu/~scd/img/s20/logos/7-gdelt.png",
+        "youtube": "mAwaFrO3oLE",
         "team": {
             "name": "GDELT-China",
             "description": "GDELT-China brings event and news article information to an accessible interface for the average researcher interested in media coverage of Chinese activities around the world. We took the initiative to reorganize and narrow the scope of GDELT 2.0 because the GDELT organization offers a rich source of data on the global media landscape. However, GDELT relies on query-based access using SQL code query the millions of events and event mentions which is unapproachable for many potential users. We have designed a data query and visualization interface that makes your investigation much more intuitive.",
@@ -1403,6 +1421,7 @@ data = [
     {
         "id": "6",
         "image": "https://itcdland.csumb.edu/~scd/img/s20/logos/6-SeedFoodLogo.png",
+        "google_drive_video": "1ZSa8LqHaeUQiLss8UUh4AWiltz-IYQZl",
         "team": {
             "name": "SeeFood CMS",
             "description": "SeeFood CMS is a content management system to support the SeeFood App. This includes a mySQL database and RESTful APIs to serve content. APIs support user authentication and authorization, as well as content upload and download. This content includes images of menu items along with information, such as ingredients and nutritional values.",
@@ -1465,6 +1484,7 @@ data = [
     {
         "id": "23",
         "image": "https://itcdland.csumb.edu/~scd/img/s20/logos/23-mbari.jpeg",
+        "youtube": "VpSgTxOaHnY",
         "team": {
             "name": "Video Annotation Access for Scientists",
             "description": "We built a website to act as a user interface for our client MBARI to be able to more easily and quickly view data gathered from their dive expeditions into the ocean.",
@@ -1551,6 +1571,7 @@ data = [
     {
         "id": "25",
         "image": "https://itcdland.csumb.edu/~scd/img/s20/logos/25-logo.png",
+        "youtube": "_BpiOF_GobU",
         "team": {
             "name": "PeerCal",
             "description": "Full web application for a Fall 2020 class. It will have 3 main functionalities: act as a portal for assignments, host class materials, allow students to view and grade the work of their peers. Students will evaluate three to four peer responses. Our algorithm will recalibrate based off an instructor's score. Three to four randomly selected students' scores will be selected for re-evaluation by the instructor. New grades are fed into our grading algorithm to re-calibrate remaining student's grades to reflect the instructor's input.",
@@ -1617,6 +1638,7 @@ data = [
     {
         "id": "10",
         "image": "https://itcdland.csumb.edu/~scd/img/s20/logos/10-logo.png",
+        "youtube": "DdUWnzpMuhc",
         "team": {
             "name": "Interview High 1",
             "description": "Interview High is a platform created for teachers that helps automate grading and plagiarism detection. Students can submit code, keep track of submission history and check their grades. Teachers can assign question sets, view student grades and observe valuable performance metrics that help them better understand how their students are progressing in the course.",
@@ -1687,6 +1709,7 @@ data = [
     {
         "id": "11",
         "image": "https://itcdland.csumb.edu/~scd/img/s20/logos/11-logo.png",
+        "youtube": "DdUWnzpMuhc",
         "team": {
             "name": "Interview High 2",
             "description": "Interview High is a platform created for teachers that helps automate grading and plagiarism detection. Students can submit code, keep track of submission history and check their grades. Teachers can assign question sets, view student grades and observe valuable performance metrics that help them better understand how their students are progressing in the course.",
@@ -1765,6 +1788,7 @@ data = [
     {
         "id": "19",
         "image": "https://itcdland.csumb.edu/~scd/img/s20/logos/19-logo.png",
+        "google_drive_video": "1M85P9mYkoIhu7oTYuYZsw1Pm54SACkB6",
         "team": {
             "name": "Data Integrity Checker",
             "description": "Our project receives live data from Food Origins' Intake Server and checks for duplicate data, missing data, GPS errors, and battery life. This data, gathered from employee devices, is then shown on a singular platform to monitor and alert supervisors of each device status and performance.",

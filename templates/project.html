@@ -19,17 +19,28 @@
             </div>
         </div>
     </div>
-        <div class="row">
-            {% for member in team['team']['members'] %}
-            {% if team['team']['members']|length % 3 == 0 %}
-                {% include 'three_row_card.html' %}
-            {% elif team['team']['members']|length % 2 == 0 %}
-                {% include 'two_row_card.html' %}
-            {% else %}
-                <!-- Any other combos use the column layout -->
-                {% include 'three_row_card.html' %}
-            {% endif %}
-            {% endfor %}
-        </div>
+    <div class="row">
+        {% for member in team['team']['members'] %}
+        {% if team['team']['members']|length % 3 == 0 %}
+            {% include 'three_row_card.html' %}
+        {% elif team['team']['members']|length % 2 == 0 %}
+            {% include 'two_row_card.html' %}
+        {% else %}
+            <!-- Any other combos use the column layout -->
+            {% include 'three_row_card.html' %}
+        {% endif %}
+        {% endfor %}
+    </div>
+
+    <div>
+        <h2 class="center-video-h2">Video Presentation</h2>
+        {% if team['youtube'] %}
+            <iframe class="center-video" width="560" height="315" src="https://www.youtube.com/embed/{{ team['youtube'] }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+        {% elif team['google_drive_video'] %}
+            <iframe class="center-video" src="https://drive.google.com/file/d/{{ team['google_drive_video'] }}/preview" width="560" height="315"></iframe>
+        {% endif %}
+
+    </div>
+
 </div>
 {% endblock %}

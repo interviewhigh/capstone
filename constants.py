@@ -1693,7 +1693,7 @@ data = [
             "members": [
                 {
                     "name": "Mike Menendez",
-                    "image": "https://itcdland.csumb.edu/scdcapstone/img/s17/stock.jpg",
+                    "image": "img/mike_menendez.jpg",
                     "major": "CS",
                     "email": "mmenendez@csumb.edu",
                     "links": [

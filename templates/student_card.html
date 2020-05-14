@@ -1,13 +1,12 @@
-<div class="card shadow-sm testimonial-card">
-    <div class="card-up indigo lighten-1"></div>
-    <div class="avatar mx-auto white">            
-        <img src="{% if member['image'].startswith('img') %} /static/{{ member['image'] }} {% else %} {{ member['image'] }} {% endif %}" class="shadow-sm rounded-circle mt-n5 img-fluid" style="width: 200px; height: 200px;" alt="{{ member['name'] }}">
+<div class="card shadow-sm">
+    <div class="avatar mx-auto">            
+        <img src="{% if member['image'].startswith('img') %} /static/{{ member['image'] }} {% else %} {{ member['image'] }} {% endif %}" class="rounded-circle mt-n5 img-fluid" style="width: 200px; height: 200px;" alt="{{ member['name'] }}">
     </div>
     <div class="card-body">
         <h4 class="text-center"> {{ member['name'] }} </h4>
         <hr class="w-100">
         <div class="text-center">
-            <a href="mailto:{{ member['email'] }}" target="_blank" class="px-2 fa-lg li-ic"><i class="fas fa-at"></i></a> 
+            <a href="mailto:{{ member['email'] }}" target="_blank" class="px-2 fa-lg li-ic"><i class="fas fa-at"></i></a>
             {% for link in member['links'] %} 
                 {% if link[0] == 'LinkedIn' %}
                     <a href="{{link[1]}}" target="_blank" class="px-2 fa-lg li-ic"><i class="fab fa-linkedin-in"></i></a> 

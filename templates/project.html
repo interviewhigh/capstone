@@ -1,28 +1,27 @@
 {% extends "base.html" %} {% block content %}
-<div class="jumbotron text-center">
+<div class="jumbotron text-center mb-0">
     <h1>School of Computing and Design Online Capstone Festival</h1>
 </div>
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            <div class="card shadow-sm reverse mb-5 animated slideInUp">
-                <div class="view view-cascade overlay center">
-                    <img class="card-img-top center" src="{{ team['image'] }}" style="width: 250px;" alt="Card image cap">
-                    <a href="#!">
-                        <div class="mask rgba-white-slight"></div>
-                    </a>
-                </div>
-                <div class="card-body card-body-cascade text-center">
-                    <h4 class="text-center font-weight-bold">{{ team['team']['name'] }}</h4>
-                    <div class="embed-responsive-16by9 d-flex justify-content-center pb-2">
-                        <strong class="zoom-container">Zoom Breakout Room: {{ team['zoom_number'] }}</strong>
-                    </div>
-                    <p class="center text-muted"> {{ team['team']['description'] }} </p>
-                </div>
+<div class="jumbotron shadow-sm bg-white text-dark text-center py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <img class="mb-4" src="{{ team['image'] }}" 
+                    style="width: 200px;" 
+                    alt="{{ team['team']['name'] }}">
+                <h2 class="font-weight-bold">{{ team['team']['name'] }}</h2>
+                <h5 class="text-csumb font-weight-bold">
+                    Zoom Breakout Room: {{ team['zoom_number'] }}
+                </h5>
+                <p class="text-muted">
+                    {{ team['team']['description'] }}
+                </p>
             </div>
         </div>
     </div>
-    <div class="row">
+</div>
+<div class="container">
+    <div class="row mt-5">
         {% for member in team['team']['members'] %} 
             {% if team['team']['members']|length  == 7 %} 
                 {% if loop.index0 < 3 %}
@@ -41,18 +40,27 @@
         {% endfor %}
     </div>
 
-    <h2 class="center-video-h2 d-flex justify-content-center">Video Presentation</h2>
+    <div class="row">
+        <div class="col-12 col-md-8 mx-0 mx-md-auto">
+            <h2 class="text-center font-weight-bold">Video Presentation</h2>
 
-    <div class="embed-responsive-16by9 pb-5 d-flex justify-content-center">
-        {% if team['youtube'] %}
-        <iframe class="d-flex justify-content-center shadow-sm w-75" height="315" src="https://www.youtube.com/embed/{{ team['youtube'] }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>       
-        {% elif team['google_drive_video'] %}
-        <iframe class="d-flex justify-content-center shadow-sm w-75" src="https://drive.google.com/file/d/{{ team['google_drive_video'] }}/preview" height="315"></iframe> 
-        {% else %}
-        <p>No Video Available</p>
-        {% endif %}
+            {% if team['youtube'] %}
+            <div class="embed-responsive embed-responsive-16by9 mb-5">
+                <iframe class="embed-responsive-item shadow-sm" 
+                src="https://www.youtube.com/embed/{{ team['youtube'] }}"
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
 
+            {% elif team['google_drive_video'] %}
+            <div class="embed-responsive embed-responsive-16by9 mb-5">
+                <iframe class="embed-responsive-item shadow-sm" 
+                src="https://drive.google.com/file/d/{{ team['google_drive_video'] }}/preview" frameborder="0"></iframe>
+            </div>
+
+            {% else %}
+            <p>No Video Available</p>
+            {% endif %}
+        </div>
     </div>
-
 </div>
 {% endblock %}

@@ -1716,7 +1716,7 @@ data = [
             "members": [
                 {
                     "name": "Mike Menendez",
-                    "image": "https://itcdland.csumb.edu/scdcapstone/img/s17/stock.jpg",
+                    "image": "img/mike_menendez.jpeg",
                     "major": "CS",
                     "email": "mmenendez@csumb.edu",
                     "links": [
@@ -1770,7 +1770,7 @@ data = [
                     "name": "Vaughn Andrews",
                     "image": "img/vaughn_andrews.jpeg",
                     "major": "CS",
-                    "email": "",
+                    "email": "vandrews@csumb.edu",
                     "links": [
                         [
                             "Resume",
